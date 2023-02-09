@@ -1,1 +1,123 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Unbounded', cursive;
+}
+body{
+    background: #ffffff;
+}
+.header{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.name{
+    font-size: 35px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.btn{
+    margin-top: 30px;
+    margin-right: 50px;
+    
+}
+.btn button{
+    padding: 10px;
+    border-radius: 5px;
+    background:black;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    margin-top: 50px;
+    font-size: 25px;
+}
+#input input{
+    padding: 14px;
+    border-radius: 10px;
+    width: 40vh;
+    margin-top: 15px;
+    background-color: rgb(228, 228, 228);
+    font-size: 15px;
+}
+#input i{
+    background-color: black;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    
+}
+#card{
+    display: grid;
+    place-items:center;
+    margin: 10px 5rem;
+    border-radius: 10px;
+    padding: 50px;
+    gap: 20px;
+    background-color: rgb(209, 209, 209);
+    font-size: 20px;
+}
+#card i{
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#card button{
+    border: none;
+    outline: none;
+    background-color: rgb(209, 209, 209);
+    
+    
+}
+
+/*------------------------------------------history---------------------------------------------*/
+
+
+#save-item{
+    display: grid;
+    height:80vh;
+    overflow: scroll;
+    background-color: rgb(136, 136, 253);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+#save-item div{
+    margin: 20px;
+    background-color: white;
+    
+}
+#save-item div i{
+    display: flex;
+    justify-content: flex-end;
+    padding:0 20px 20px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#details{
+    font-size: 15px;
+}
