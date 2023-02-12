@@ -4,7 +4,6 @@ let card = document.getElementById("card");
 let saveItem = document.querySelector("#save-item");
 let sound = document.getElementById("sound");
 
-let searches = [];
 button.addEventListener("click",()=>{
   let inputWord = document.getElementById("input-Word").value;
   fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputWord}`)
@@ -19,27 +18,62 @@ button.addEventListener("click",()=>{
     `;
     sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
 
-    searches.push({Word:inputWord,meaning:data[0].meanings[0].definitions[0].definition})
-    localStorage.setItem("search",JSON.stringify(searches))
+    localStorage.setItem(`${inputWord}`,`${data[0].meanings[0].definitions[0].definition}`)
   })
   .catch(()=>{
     card.innerHTML = "<h4>Couldn't Find The Word</h4>"
   })
 })
+
 function playSound(){
   sound.play();
 }
-new1 = document.getElementsByClassName("new")
-localStorage.setItem("name2","aziz")
-let his = localStorage.getItem("name2")
-function renderSearch(){
-  new1.innerHTML = "";
-  his.forEach((searchTerm)=>{
-    const li = document.createElement("li")
-    li.innerHTML = searchTerm;
-    new1.appendChild(li);
-    console.log("hi")
-  })
+
+const historybtn = document.getElementById("historybtn");
+const historyPage = document.querySelector(".historyPage");
+const main = document.querySelector(".main")
+
+historybtn.addEventListener("click",()=>{
+  if(historybtn.innerText == "HISTORY"){
+    document.querySelector(".search").style.display = "none";
+    card.style.display = "none";
+    historyPage.style.display = "flex";
+    if(localStorage.length == 0){
+      historyPage.innerHTML = "<div class = 'empty'><img src='https://cdn-icons-png.flaticon.com/512/1380/1380641.png' alt='image'><span>No Search Found</span></div>";
+
+    }
+    historybtn.innerHTML = "SEARCH";
+    document.querySelector(".name").innerText = "My DICTIONARY App History";
+    for(let i=0; i<localStorage.length; i++){
+      if(localStorage.key(i) == "count"){
+        continue;
+      }
+      let div = document.createElement("div");
+      div.setAttribute("class","newDiv");
+      div.innerHTML = `<span>Word: <span class="getdata">${localStorage.key(i)}</span></span>
+      <br>
+      <p>${localStorage.getItem(localStorage.key(i))}</p>
+      <i onclick="deleteDiv(this)" id="dlt" class="fa-solid fa-trash"></i>`;
+      historyPage.appendChild(div);
+    }
+  }
+  else if(historybtn.innerText == "SEARCH"){
+    document.querySelector(".name").innerText = "My DICTIONARY App";
+    historyPage.innerHTML = "";
+    historyPage.style.display = "none";
+    document.querySelector(".search").style.display = "flex";
+
+    card.style.display = "block";
+    historybtn.innerText = "HISTORY";
+
+  }
+})
+
+function deleteDiv(currentEl){
+  let key = currentEl.parentElement.querySelector(".getdata").innerText;
+  currentEl.parentElement.remove();
+
+  localStorage.removeItem(key);
 }
-renderSearch();
+
 

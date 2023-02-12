@@ -92,32 +92,47 @@ body{
 /*------------------------------------------history---------------------------------------------*/
 
 
-#save-item{
-    display: grid;
-    height:80vh;
-    overflow: scroll;
-    background-color: rgb(136, 136, 253);
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    justify-items: center;
-    align-items: center;
-    padding-left: 100px;
-    padding-right: 100px;
-    
-}
-#save-item div{
-    margin: 20px;
-    background-color: white;
-    
-}
-#save-item div i{
+.newDiv{
+    background: rgb(209, 209, 209);
+    height: auto;
+    width: 23%;
     display: flex;
-    justify-content: flex-end;
-    padding:0 20px 20px 20px;
-    font-size: 20px;
-    cursor: pointer;
+    flex-direction: column;
+    padding: 2% 2%;
+    margin: 3% 3%;
+    border: 1px solid black;
+    overflow: auto;
+    
 }
-#details{
-    font-size: 15px;
+.newDiv span{
+    font-size: 20px;
+}
+#dlt{
+    margin-left: auto;
+    margin-top: auto;
+    cursor: pointer;
+    font-size: 150%;
+}
+.historyPage{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.empty img{
+    width: 10%;
+    margin-top: 5%;
+}
+.empty span{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }

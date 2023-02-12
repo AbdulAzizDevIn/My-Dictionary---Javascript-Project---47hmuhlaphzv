@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,30 +9,34 @@
 </head>
 <link rel="stylesheet" href="styles.css">
 <script src="https://kit.fontawesome.com/dd1e4573ce.js" crossorigin="anonymous"></script>
+
 <body>
     <audio id="sound"></audio>
-    <div class="header">
-        <div class="logo">
-            <img src="img/dictionary_logo-removebg.png" alt="">
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <img src="img/dictionary_logo-removebg.png" alt="">
+            </div>
+            <div class="name">My DICTIONARY App</div>
+            <div class="btn">
+                <button id="historybtn" type="button">HISTORY</button>
+            </div>
         </div>
-        <div class="name">My DICTIONARY App</div>
-        <div class="btn">
-            <a href="history.html"><button id="history" type="submit">HISTORY</button></a>
+        <div class="search">
+            <p>Search for new word</p>
+            <div id="input">
+                <input id="input-Word" type="text"> <i id="btn2" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="historyPage">
+
+        </div>
+        <div id="card">
+            <div>Let's Start</div>
         </div>
     </div>
-    <div class="search">
-        <p>Search for new word</p>
-        <div id="input">
-            <input id="input-Word" type="text"> <i id="btn2" class="fa-solid fa-magnifying-glass"></i>
-        </div>
-    </div>
-    <audio id="sound"></audio>
-    <div id="card">
-        <div>Let's Start</div>
-        
-    </div>
-    <div class="new"></div>
-<script src="https://kit.fontawesome.com/dd1e4573ce.js" crossorigin="anonymous"></script>
-<script src="App.js"></script>
+    <script src="https://kit.fontawesome.com/dd1e4573ce.js" crossorigin="anonymous"></script>
+    <script src="App.js"></script>
 </body>
+
 </html>
