@@ -62,8 +62,7 @@ historybtn.addEventListener("click",()=>{
     historyPage.innerHTML = "";
     historyPage.style.display = "none";
     document.querySelector(".search").style.display = "flex";
-
-    card.style.display = "block";
+    card.style.display = "grid";
     historybtn.innerText = "HISTORY";
 
   }
