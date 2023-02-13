@@ -28,6 +28,9 @@ body{
     margin-top: 30px;
     margin-left: 10px;
 }
+.name div{
+    text-align: center;
+}
 .btn{
     margin-top: 30px;
     margin-right: 50px;
@@ -135,4 +138,43 @@ body{
     font-size: 20px;
     margin-top: 5%;
     margin-bottom: 10%;
+}
+
+
+
+
+/*----------------------------------for smaller screen-------------------------------------*/
+
+@media only screen and (max-width:750px) {
+    .name{
+        font-size: 20px;
+        
+    }
+    .logo{
+        display: none;
+    }
+    .logo img{
+        width: 70px;
+        height: 70px;
+        
+    }
+    .btn {
+       margin:22px 1px;
+    }
+    .search p{
+        font-size: 20px;
+    }
+    #input input{
+        padding: 10px;
+        font-size: 12px
+    }
+    #input i{
+        font-size: 20px;
+    }
+    #card{
+        font-size: 15px;
+    }
+    .newDiv{
+        width: 39%;
+    }
 }

@@ -43,7 +43,7 @@ historybtn.addEventListener("click",()=>{
 
     }
     historybtn.innerHTML = "SEARCH";
-    document.querySelector(".name").innerText = "My DICTIONARY App History";
+    document.querySelector(".name").innerHTML = "<span>My DICTIONARY App</span><div> History</div>";
     for(let i=0; i<localStorage.length; i++){
       if(localStorage.key(i) == "count"){
         continue;
