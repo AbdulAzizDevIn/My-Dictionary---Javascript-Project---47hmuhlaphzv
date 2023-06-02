@@ -10,7 +10,7 @@ body{
     background: #ffffff;
 }
 .header{
-    height: 20vh;
+    height: 200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -78,6 +78,7 @@ body{
     gap: 20px;
     background-color: rgb(209, 209, 209);
     font-size: 20px;
+    height: 20vh;
 }
 #card i{
     font-size: 30px;
@@ -142,6 +143,24 @@ body{
     margin-top: 5%;
     margin-bottom: 10%;
 }
+.copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Add this line to vertically align the content */
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(209, 209, 209);
+    font-weight: 400;
+    margin-top: 13.9rem;
+}
+
+
+
+
+
+
+
 
 
 

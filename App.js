@@ -25,6 +25,7 @@ button.addEventListener("click", () => {
           `${inputWord}`,
           `${data[0].meanings[0].definitions[0].definition}`
         );
+
       })
       .catch(() => {
         card.innerHTML = "<h4>Couldn't Find The Word</h4>";
@@ -32,9 +33,17 @@ button.addEventListener("click", () => {
   }
 });
 
+
 function playSound() {
-  sound.play();
+  if (sound.src === "" || sound.error) {
+    alert("No pronunciation available for this word.");
+  } else {
+    sound.play();
+  }
+
 }
+
+
 
 const historybtn = document.getElementById("historybtn");
 const historyPage = document.querySelector(".historyPage");
